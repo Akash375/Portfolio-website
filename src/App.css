@@ -1,38 +1,118 @@
-.App {
+html{
+  scroll-behavior: smooth;
+}
+
+.main{
+  background-image: url(./backimg3.jpg);
+  background-size: cover;
+  height: 80vh;
+  }
+
+#title{
+  font-size: 6rem;
+}
+
+#mypic{
+  border: 0 solid #BFBFBF;
+  background-color: white;
+  box-shadow: 1rem 1rem 2rem #BFBFBF;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 500px;
+  height: 300px;
+  perspective: 1000px;
+  padding: 1rem 0 1rem 3rem;
+}
+
+.flip-card-inner {
+  position: relative;
   text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding:0 ;
+  width:85%;
+  background:#DDDDDD;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  opacity:80%;
+}
+
+.flip-card-back {
+  background:#DDDDDD;
+  transform: rotateY(180deg);
+}
+
+.cardText{
+  font-family: 'Calibri Light';
+  padding: 3.5em 0;
+  font-size:2rem;
+  color:#FFFFFF;
+}
+
+.subtitle{
+  font-size: 1rem;
+  color:#505050;
+}
+
+#projects{
+  background-image: linear-gradient(#808080,#C0C0C0);
+}
+
+#edutitle{
+  padding:1.5rem 0.9rem 0 0.9rem;
+  font-size: 1.80rem;
+  font-weight:500;
+}
+
+#edusubt{
+  font-family: 'Bahnschrift Light';
+  padding: 0 0.9rem 0 0.9rem;
+}
+
+.logo{
+  padding: 2rem 0.5rem;
+}
+
+#skills{
+  background: linear-gradient(#027B93,#87ceeb);
+}
+
+#contact .fa{
+  color:#FFFFFF;
+}
+
+#contact .fa:hover {
+  color:#45b3e0;
+}
+
+@media (max-width: 800px) {
+  /* CSS that should be displayed if width is equal to or less than 800px goes here */
+  #title{
+    font-size: 3.25rem;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  #edutitle{
+    padding:1.5rem 0.9rem 0 0.9rem;
+    font-size: 1.5rem;
+    font-weight: 500;
   }
-  to {
-    transform: rotate(360deg);
+
+  .logo{
+    padding: 2rem 0.1rem;
   }
 }
